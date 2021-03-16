@@ -1,0 +1,619 @@
+/* This is the CSS part of SRSF - Small and Responsive Site Framework   */
+/* Author:      Yury Solonitsyn, Saint Petersburg, Russia               */
+/* GitHub page: https://github.com/jjeerrrryy/srsf_web_framework        */
+/* Licence:     MIT                                                     */
+
+/* Text and main blocks styles */  
+
+/* margin: auto; // Vertical-align: center */
+
+    /* The sizing model is set to be more accurate when counting element's dimensions */
+    * {box-sizing: border-box;}
+    
+    /* The general page properties */
+    BODY { color: rgb(0,34,62);
+           background-color: rgb(255,255,255);
+           padding: 0px;
+           margin: 0px;
+           overflow-y: scroll;
+         }
+
+    /* The page paramenters for site article pages with the header's background image */
+    BODY.pages { /*background-image: url("http://www.adesignlab.ru/v7_2/images/header.jpg");
+                background-position: 50% 0%;
+                background-repeat: no-repeat; */}         
+
+    /* The page header - logo, header image and navigation */                
+    HEADER { font-family: "Helvetica Neue", "Helvetica", Verdana, Tahoma, Arial, sans-serif;
+             text-align: left;
+             padding: 0px;
+             margin: auto;             
+             width: 1200px;
+           }
+    /* Navigation links */       
+    NAV { display: inline-block;
+          position: absolute;
+          right: 0px;
+          bottom: 0px;
+          padding: 0px 10px 0px 0px; 
+          margin: 0px;
+        }
+        
+    /* The page payload - semantic layout */
+    ARTICLE { padding: 0px;
+              margin: 0px;
+           }
+           
+    /* The page footer - disclaimers, date, etc. */           
+    FOOTER { display: flex;
+	         flex-direction: row;
+             flex-wrap: wrap;
+			 justify-content: center;    
+             padding: 0px;
+             margin: auto;
+             border-top: 20px solid rgb(255,255,255);
+             width: 100%;
+           }           
+
+/* Headers */
+
+    H1 { font-size: 20pt;
+         font-family: "Helvetica Neue", "Helvetica", Verdana, Tahoma, Arial, sans-serif;
+         line-height: 1;
+	     display: block;
+	     padding-top: 20px;
+		 padding-left: 250px;
+		 padding-right: 10px;
+		 padding-bottom: 10px;
+		 margin: auto; 
+	     width: 1200px;
+		 background-color: rgb(255,255,255);
+	   }
+				 
+    H2 { font-size: 16pt;
+         font-family: "Helvetica Neue", "Helvetica", Verdana, Tahoma, Arial, sans-serif;
+         line-height: 1;
+	     display: block;
+	     padding-top: 20px;
+		 padding-left: 250px;
+		 padding-right: 10px;
+		 padding-bottom: 10px;
+		 margin: auto;
+	     width: 1200px;
+		 background-color: rgb(255,255,255);
+	   }
+
+    H3 { font-size: 14pt;
+         font-family: "Helvetica Neue", "Helvetica", Verdana, Tahoma, Arial, sans-serif;
+	     line-height: 1;
+         display: block;
+	     padding-top: 20px;
+		 padding-left: 250px;
+		 padding-right: 10px;
+		 padding-bottom: 5px;
+		 margin: auto;
+	     width: 1200px;
+		 background-color: rgb(255,255,255);
+	   }				 
+				 
+    DIV H2 { padding-left: 0px;
+	         width: 100%;
+		   }
+    DIV H3 { padding-left: 0px;
+	         width: 100%;
+		   }		  
+
+/* Header elements */
+
+    /* Bredcrumbs section */
+    .breadcrumbs { display: block;
+                   margin: auto; /* Vertical align: center; */
+                   padding-left: 250px;
+                   padding-right: 10px;
+                   padding-top: 7px;
+                   padding-bottom: 5px;
+                   font-family: "Times New Roman", Times, serif;
+                   font-size: 12pt;
+                   align: left;
+                   background-color: rgb(255,255,255);
+                   width: 1200px;
+                 }
+
+    /* Logotype block */                 
+    .logotype { display: block;                
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                padding: 0px;
+                margin: 0px;
+                width: 280px;
+                height: 80px;
+              }
+              
+    /* Main block of the page header */
+    .header_base { display: block;              
+                   position: relative;
+                   height: 150px;
+                   overflow: hidden;
+				   background-color: rgb(0, 90, 134);
+              }
+
+    /* Navigation link to another site section */
+    .nav_link { display: inline-block;
+                font-family: "Helvetica Neue", "Helvetica", Verdana, Tahoma, Arial, sans-serif;
+                font-size: 12pt;
+                font-weight: 500;
+                text-decoration: none;
+                color: rgba(255,255,255,1);
+                background-color: none;
+                padding-top: 10px;
+                padding-right: 15px;
+                padding-bottom: 5px;
+                padding-left: 15px;
+              }
+    .nav_link:active {color: rgba(255,255,255,1);}
+    .nav_link:visited {color: rgba(255,255,255,1);}
+    
+
+    /* Navigation link in the hover state */          
+    .nav_link:hover { color: rgba(255,255,255,1);
+                      background-color: rgba(220,225,235,0.5);
+                    }
+    
+    /* Navigation link to the current page or a block representing those link - substituted by SPAN in navigation rendering PHP file */
+    .nav_link_selected { display: inline-block;
+                         font-family: "Helvetica Neue", "Helvetica", Verdana, Tahoma, Arial, sans-serif;
+                         font-size: 12pt;
+                         font-weight: 500;
+                         text-decoration: none;
+                         color: rgb(0,34,62); 
+                         background-color: rgba(255,255,255,1);
+                         padding-top: 10px;
+                         padding-right: 15px;
+                         padding-bottom: 5px;
+                         padding-left: 15px;
+                       }
+    .nav_link_selected:active {color: rgb(220, 80, 34);}
+    .nav_link_selected:visited {color: rgb(0,34,62);}
+    .nav_link_selected:hover {color: rgb(0,34,62);}
+                 
+/* Page structures */    
+   
+    /* Simple paragraph */
+	P  { color: inherit;
+	     font-family: inherit;
+		 font-size: inherit;
+         line-height: 140%;
+         margin-top: 10px;
+         margin-bottom: 5px;
+         padding-right: 120px;         
+       }
+    
+    /* The first paragraph in a block or section */
+    P:first-child { margin-top: 0px;
+                  }
+  
+    /* An unordered list within a section (e.g. flex section - article text) */
+    DIV UL { padding-top: 0px;
+             margin-top: 0px;
+             margin-bottom: 5px;
+           }
+           
+    /* An ordered list within a section (e.g. flex section - article text) */
+    DIV OL { padding-top: 0px;
+             margin-top: 0px;
+             margin-bottom: 5px;
+           }           
+  
+    /* An unordered list at the text start within a DIV (e.g. a flex section) */
+    DIV UL:first-child { padding-top: 0px;
+                         margin-top: 0px;
+                       }
+                       
+    /* An ordered list at the text start within a DIV (e.g. a flex section) */
+    DIV OL:first-child { padding-top: 0px;
+                         margin-top: 0px;
+                       }                       
+    
+    /* A list item of an unordered list */    
+    UL LI { text-align: left;
+            line-height: 140%;
+            padding-top: 10px;
+            padding-right: 120px;
+            list-style-type: square;            
+          }
+          
+    /* A list item of an ordered list */    
+    OL LI { text-align: left;
+            line-height: 140%;
+            padding-top: 5px;
+            padding-right: 120px;            
+          }          
+                       
+    /* The first item of an unordered list */
+    UL LI:first-child { padding-top: 0px;
+                        margin-top: 0px;
+                      }
+                      
+    /* The first item of an ordered list */
+    OL LI:first-child { padding-top: 0px;
+                        margin-top: 0px;
+                      }                      
+
+    /* The last item of an unordered list */
+    UL LI:last-child { padding-bottom: 10px;
+                      }
+                      
+    /* The last item of an unordered list */
+    OL LI:last-child { padding-bottom: 10px;
+                      }                        
+                      
+    /* A paragraph within a list item */
+    LI P { margin-top: 8px;
+           padding-right: 0px;
+         }
+
+    /* An unorderd list within a list item */         
+    LI UL { margin-bottom: 0px;
+          }
+        
+    /* A list item of an unordered list withing another list item */    
+    LI UL LI { text-align: left;
+               padding-top: 0px;
+               list-style-type: disc;
+             }         
+         
+    /* A list item within another list item */
+    LI LI { list-style-type: disc;
+          }
+          
+    /* The last item of an unordered list within another list item */
+    LI UL LI:last-child { padding-bottom: 0px;
+                        }          
+    
+    SUP { vertical-align: baseline;
+          position: relative;
+          top: -0.3em;
+        }
+        
+    /* Links */
+    A {color: rgb(0 ,124, 232);}
+    A:active {color: rgb(220, 80, 34);}
+    A:visited {color: rgb(0, 87, 164);}
+    A:hover {color: rgb(220, 80, 34);}
+
+    
+	   
+/* Flex blocks/structure classes */	   
+	   
+    /* Text section with flex content - 2 blocks for text and side notes.
+       For window wider than 950 px the side notes block is located to the left of the text block.
+       For narrower windows/mobile screens it's locetad below the text block */
+	.flex_section { display: flex;
+	                flex-direction: row;
+				    flex-wrap: wrap-reverse;
+				    justify-content: center;
+				    width: 100%;
+	              }
+				  
+    /* Side notes block */
+	.side_notes { width: 250px;
+                  padding-top: 5px;
+                  padding-right: 10px;
+                  padding-left: 10px;
+                  padding-bottom: 10px;
+	              background-color: rgb(255,255,255);
+	            }
+    
+    /* Special class to make empty notes block invisible at all page/window sizes (to avoid the empty line of warped notes after a block in narrow windows) */
+    .side_notes_empty { width: 250px;
+                        padding-top: 5px;
+                        padding-right: 10px;
+                        padding-left: 10px;
+                        padding-bottom: 10px;
+	                    background-color: rgb(255,255,255);
+                       }
+
+    /* Text block of the flex section */
+	.article_text { font-family: "Times New Roman", Times, serif;
+		            font-size: 14pt;
+                    text-align: justify;
+                    width: 950px;
+	                background-color: rgb(255,255,255);
+                    padding-top: 5px;
+                    padding-right: 20px;
+                    padding-left: 0px;
+                    padding-bottom: 5px;
+	            }
+                        
+
+/* Intro-1 elements - Intro-1 - a block with 1 image and annotating text. Useful for the site sections descriptions and links or text with an illustration */
+
+    /* Dividing block - allows to place several Intro-1 elements one by one in the article text section */
+	.intro1_block { clear: left;
+                   }	
+
+    /* Text header lockated within the Intro-1 block */
+	.intro1_header { font-family: "Helvetica Neue", "Helvetica", Verdana, Tahoma, Arial, sans-serif;
+                     font-size: 12pt;
+	                 font-weight: bold;
+					 display: inline-block;
+                     padding-bottom: 10px;
+                   }	
+   
+   /* Intro-1 image */
+	.intro1_image { width: 300px;
+	                float: left;
+	                border: 0px;
+                    display: table;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                  }	
+	.intro1_image_border { width: 300px;
+	                       float: left;
+	                       border: 1px solid rgb(47, 47, 47);
+                           display: table;
+                           margin-right: 10px;
+                           margin-bottom: 10px;
+                         }	                  
+                  
+                  
+   /* Intro-1 annotation */
+	.intro1_text { 
+	             }
+				 
+/* Intro-3 elements - to be used as tiles representind site sections or products. Tiles can be placed one by one and will float acoording to chning of page/window/screen width */
+/* Text can be just put into the section or designated with dedicated DIV with "intro3_text" class (has no special properties at this version) */
+
+    /* Intro-3 block contains an image and a describing text */
+	.intro3_block { margin-bottom: 20px;
+                    display: inline-block;
+                    vertical-align: top;
+					width: 300px;
+                    
+                   }	
+    /* Intro-3 block image */
+	.intro3_image { width: 300px;
+	                display: table;
+                    margin: 4px;
+                    border: 1px solid rgb(47, 47, 47);
+                  }	
+                  
+    /* Intro-3 description */
+	.intro3_text { /* font-size: 12pt; */
+                   text-align: left;
+                   padding-top: 5px;
+                   padding-left: 5px;
+                   padding-right: 10px;
+	             }
+
+    /* Intro-3 block image to be user as small article illustrations */
+	.intro3_image_art { width: 300px;
+	                    display: table;
+                        margin: 4px;
+                        border: none;
+                      }	                 
+                 
+    /* Intro-3 description to be user as small article illustrations */
+	.intro3_text_art { font-size: 12pt;
+                       font-style: italic;
+                       text-align: left;
+                       padding-top: 5px;
+                       padding-left: 5px;
+                       padding-right: 10px;
+                       font-size: 12pt;                      
+	                 }	                 
+
+/* Figures/illustrations */
+
+    .wide_image { display: block;
+	              margin: auto;
+				  align: center;
+	              max-width: 1200px;
+                  padding-top: 10px;
+                  background-color: rgb(255, 255, 255);
+	            }
+	.wide_image_img { width: 100%;
+                      height: auto;	
+				    }
+	.wide_image_cap { padding-left: 250px;
+	                  padding-bottom: 30px;
+                      font-family: "Times New Roman", Times, serif;
+		              font-size: 12pt;
+                      font-style: italic;
+	                }
+	.wide_image_cap_empty { display: none;
+                            padding-left: 250px;
+	                        padding-bottom: 20px;
+                            font-family: "Times New Roman", Times, serif;
+		                    font-size: 12pt;
+                            font-style: italic;
+	                      }                    
+                    
+    .art_image { display: block;
+	             max-width: 950px;
+                 padding-left: 0px;
+                 padding-right: 0px;
+                 margin: 0px;
+	            }    
+    .art_image_img { max-width: 950px;
+                     height: auto;	
+				   }
+	.art_image_cap { padding-left: 0px;
+	                 padding-bottom: 20px;
+                     margin-left: 0px;
+                     font-size: 12pt;
+                     font-style: italic;
+	               }            
+  
+/* Footer elements */
+
+    .footer_block_left { display: block;
+                         color: rgb(150,150,150);
+                         font-family: "Times New Roman", Times, serif;
+                         font-size: 12pt;
+                         text-align: left;
+                         padding: 50px 10px 10px 250px;
+                         width: 600px;
+                       }
+    .footer_block_right { display: block;
+                          color: rgb(150,150,150);
+                          font-family: "Times New Roman", Times, serif;
+                          font-size: 12pt;
+                          text-align: right;
+                          padding: 50px 10px 10px 10px;
+                          width: 600px;
+                        }
+    .footer_block_single { display: block;
+                           color: rgb(150,150,150);
+                           font-family: "Times New Roman", Times, serif;
+                           font-size: 12pt;
+                           text-align: center;
+                           padding: 10px;
+                           width: 100%;
+                         }                            
+                        
+/* Index & NRP pages elements */   
+
+    .index_main { display: table;
+                  table-layout: fixed;
+                  position: absolute;
+                  top: 0px;
+                  bottom: 0px;
+                  width: 100%;
+                  height: 100%;
+                  text-align: center;
+                  margin: auto;
+                  background-color: rgb(255, 255, 255);
+                }
+    .index_content { display: table-cell;
+                     vertical-align: middle;
+                   }
+    .index_image_container { width: 834px;
+                             margin: auto;
+                 }    
+    .index_image { width: 834px;
+                   height: auto;
+                 }    
+    .index_text { display: inline-block;
+                  font-family: "Times New Roman", Times, serif;
+                  font-size: 14pt;
+                  padding-left: 20px;
+                  padding-right: 20px;
+                }                     
+                   
+    .index_footer { display: flex;
+	                flex-direction: row;
+                    flex-wrap: wrap;
+			        justify-content: center;    
+                    padding: 0px;
+                    margin: auto;             
+                    width: 100%;
+                  }    
+				 
+
+/* Media rules */				
+
+	@media screen and (max-width: 1200px) {
+	  HEADER {padding-left: 0px; width: 950px;}
+      FOOTER {width: 950px;}
+      H1 {padding-left: 10px; width: 950px;}
+	  H2 {padding-left: 10px; width: 950px;}
+	  H3 {padding-left: 10px; width: 950px;}
+      P {padding-right: 0px;}
+      UL LI {padding-right: 0px;}
+      OL LI {padding-right: 0px;}
+      .breadcrumbs {padding-left: 10px; width: 950px;}
+	  .article_text  { padding: 10px;}          
+	  .side_notes    { width: 950px; padding-top: 0px;}
+      .side_notes_empty {display: none;}
+	  .intro1_header { width: 600px;}
+	  .wide_image    { width: 950px;}
+	  .wide_image_cap { padding-left: 10px;}
+      .art_image     { width: 100%;}
+      .art_image_cap { padding-left: 0px;}
+      .footer_block_left {width: 475px; padding-left: 10px;}
+      .footer_block_right {width: 475px;}
+      
+      .index_image_container {width: 500px; height: auto;}
+      .index_image {width: 500px; height: auto;}
+      .index_text {font-size: 14pt;}      
+	              }				
+				
+	@media screen and (max-width: 950px) {
+	  HEADER {padding-left: 0px; width: 100%;}
+	  FOOTER {padding-left: 0px; width: 100%; justify-content: left;}      
+      H1 {padding-left: 10px; width: 100%;}
+	  H2 {padding-left: 10px; width: 100%;}
+	  H3 {padding-left: 10px; width: 100%;}
+      P {padding-right: 0px;}
+      UL LI {padding-right: 0px;}
+      OL LI {padding-right: 0px;}      
+      .header_base {position: relative;}      
+      .breadcrumbs {padding-left: 10px; width: 100%;}
+      .flex-section  { justify-content: left; }
+	  .article_text  { padding: 10px 10px 10px 10px;}      
+	  .side_notes    { width: 100%; padding-top: 0px;}
+      .side_notes_empty {display: none;}
+	  .intro1_header { width: calc(100% - 350px);}
+      .test_header   { padding-left: 10px; width: calc(100% - 20px);}
+      .wide_image    { width: 100%;}
+      .wide_image_img { width: 100%;}	  
+	  .wide_image_cap { padding-left: 10px;}
+      .art_image     { width: 100%;}
+      .art_image_img { max-width: 100%; height: auto;}      
+      .art_image_cap { padding-left: 0px;}      
+      .footer_block_left {width: 100%; padding-left: 10px;}
+      .footer_block_right {text-align: left; width: 100%; padding: 0px 10px 10px 10px;}
+
+      .index_image_container {max-width: 834px; height: auto;}
+      .index_image {width: max-834px; height: auto;}
+      .index_text {font-size: 14pt;}
+      
+	              }
+ 	
+	@media screen and (max-width: 550px) {
+	  HEADER {font-size: 10pt;}
+      FOOTER {font-size: 10pt; justify-content: left;}
+      NAV {position: absolute; font-size: 1vw;}             
+      H1 {font-size: 10vw;}
+	  H2 {font-size: 8vw;}
+	  H3 {font-size: 7vw;}
+      P {padding-right: 0px;}
+      UL LI {padding-right: 0px;}
+      OL LI {padding-right: 0px;}      
+      .breadcrumbs {padding-left: 10px; width: 100%;}
+	  .article_text  {font-size: 5vw; padding: 10px;}
+      .intro1_block {padding-top: 20px;}
+	  .intro1_header { width: 100%;}	
+	  .intro1_image { float: none; clear: both; }
+	  .test_header   { padding-left: 10px;}
+	  .wide_image    { width: 100%;}
+	  .wide_image_cap {padding-left: 10px;}
+      .art_image     { width: 100%;}
+      .art_image_img { max-width: 100%; height: auto;}
+      .art_image_cap { padding-left: 0px;}
+      .header_base {position: relative; max-width: 100%;}
+      .logotype {/*position: static;*/ max-width: 100%;} 
+      .nav_link {font-size: 10pt;}
+      .nav_link_selected {font-size: 10pt;}
+      .footer_block_left {width: 100%; padding-left: 10px;}
+      .footer_block_right {text-align: left; width: 100%; padding: 0px 10px 10px 10px;}
+
+      .index_image_container {max-width: 100%; height: auto;}
+      .index_image {max-width: 100%; height: auto;}
+      .index_text {font-size: 14pt;}      
+
+      }
+      
+	@media screen and (max-height: 500px) {
+      FOOTER {font-size: 10pt; justify-content: left;}
+      .footer_block_left {width: 100%; padding-left: 10px;}
+      .footer_block_right {text-align: left; width: 100%; padding: 0px 10px 10px 10px;}
+      .footer_block_right {font-size: 12pt;}
+
+      .index_image_container {max-height: 70vh; width: auto;}
+      .index_image {max-height: 70vh; width: auto;}
+      .index_text {font-size: 14pt;}
+      
+      }      
